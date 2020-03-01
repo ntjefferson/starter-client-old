@@ -1,0 +1,49 @@
+@import "~antd/dist/antd.css";
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.ant-card-loading-content {
+  height: 100%;
+}
+/* GENERAL MIDDLE OF DIV */
+.middle-div {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+/* LOGO */
+.logo {
+  height: 32px;
+  background: url("./assets/drop_fake_logo.svg") no-repeat;
+  margin: 16px;
+  background-position: center;
+}
+
+.logo-login {
+    height: 64px;
+    background: url("./assets/drop_fake_logo.svg") no-repeat;
+    margin: 16px;
+    background-position: center;
+  }
+
+.logo-mobile {
+  height: 24px;
+  background: url("./assets/drop_fake_logo_mobile.svg") no-repeat;
+  margin: 20px;
+  background-position: center;
+}

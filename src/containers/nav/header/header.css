@@ -1,0 +1,67 @@
+.right-header-menu {
+  float: right;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.account-menu {
+  width: 150px;
+}
+
+.account-menu li {
+  font-size: 14px;
+}
+
+.account-menu svg {
+  font-size: 14px;
+}
+
+.account-menu-item {
+  margin-left: 8px;
+}
+
+.trigger {
+  font-size: 20px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #606b82;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.trigger-second {
+  font-size: 20px;
+  margin: 0 0 0 16px;
+  transition: color 0.3s;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-color: #606b82;
+  color: #606b82;
+}
+
+.trigger-second:hover {
+  color: #1890ff;
+}
+
+.trigger-third {
+  font-size: 20px;
+  margin: 0 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-color: #606b82;
+  color: #606b82;
+}
+
+.trigger-third:hover {
+  color: #1890ff;
+}
+
+.avatar {
+  cursor: pointer;
+  background-color: #485266;
+}

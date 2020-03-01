@@ -1,0 +1,25 @@
+
+.sidebar {
+  background-color: #2B3548;
+}
+
+.sidebar-menu {
+  background-color: #2B3548;
+}
+
+.sidebar-menu-item {
+  font-size: 16px !important;
+}
+
+.sidebar-menu-item svg {
+  margin-right: 10px;
+  font-size: 18px !important;
+}
+
+.sidebar-submenu-item {
+  font-size: 14px !important;
+}
+
+.sidebar-submenu-container ul {
+  background-color: #445068 !important;
+}

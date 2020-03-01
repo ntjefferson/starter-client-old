@@ -1,0 +1,21 @@
+.user-background {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Page */
+
+.login-form {
+  max-width: 400px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
