@@ -29,21 +29,21 @@ code {
 /* LOGO */
 .logo {
   height: 32px;
-  background: url("./assets/drop_fake_logo.svg") no-repeat;
+  background: url("./assets/nickj.svg") no-repeat;
   margin: 16px;
   background-position: center;
 }
 
 .logo-login {
     height: 64px;
-    background: url("./assets/drop_fake_logo.svg") no-repeat;
+    background: url("./assets/nickj-dark.svg") no-repeat;
     margin: 16px;
     background-position: center;
   }
 
 .logo-mobile {
-  height: 24px;
-  background: url("./assets/drop_fake_logo_mobile.svg") no-repeat;
-  margin: 20px;
+  height: 32px;
+  background: url("./assets/nickj-short.svg") no-repeat;
+  margin: 16px;
   background-position: center;
 }

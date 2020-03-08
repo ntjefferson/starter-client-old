@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
-import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { Icon as LegacyIcon } from "@ant-design/compatible";
 
 // Design
 import { Drawer, Divider, Row, Empty, Badge } from "antd";
 
-// Helper
-import { useFetch } from "../../../../helper/useFetch";
+// Utils
+import { useFetch } from "../../../../utils/useFetch";
+import { useWindowDimensions } from "../../../../utils/useWindow";
 
 // Other
 import moment from "moment";
@@ -23,7 +25,9 @@ const NotificationIcon = type => {
     icon = ["question-circle", ""];
   }
 
-  return <LegacyIcon style={{ color: icon[1], fontSize: "32px" }} type={icon[0]} />;
+  return (
+    <LegacyIcon style={{ color: icon[1], fontSize: "32px" }} type={icon[0]} />
+  );
 };
 
 // Notification Item
@@ -60,6 +64,8 @@ const NotificationItem = data => {
 
 const Notifications = props => {
   const [drawer, setDrawer] = useState(false);
+  const size = useSelector(state => state.screenSize.size);
+  const { width } = useWindowDimensions();
 
   const showNotificationPane = () => {
     setDrawer(!drawer);
@@ -79,11 +85,11 @@ const Notifications = props => {
         />
       </Badge>
       <Drawer
+        title="Recent Notifications"
         placement="right"
-        closable={false}
         visible={drawer}
         onClose={showNotificationPane}
-        width={480}
+        width={size > 1 ? 480 : width}
         bodyStyle={{ height: "100%" }}
       >
         {data.length > 0 ? (

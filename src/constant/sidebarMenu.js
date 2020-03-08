@@ -1,7 +1,7 @@
 export const sidebarMenu = [
   {
     link: "/a/dashboard",
-    icon: "dashboard",
+    icon: "appstore",
     theme: "outlined",
     label: "Dashboard",
     component: "",

@@ -10,13 +10,18 @@ import Colx from "../../../components/Colx";
 const AccountView = () => {
   return (
     <Row gutter={[24, 16]} type="flex">
-      <Colx w={12}>
+      <Colx w={8}>
         <InfoCard title="Test Title" loading>
           Account View
         </InfoCard>
       </Colx>
-      <Colx w={12}>
+      <Colx w={8}>
         <InfoCard title="Test Title" empty>
+          Account View
+        </InfoCard>
+      </Colx>
+      <Colx w={8}>
+        <InfoCard title="Test Title" error>
           Account View
         </InfoCard>
       </Colx>

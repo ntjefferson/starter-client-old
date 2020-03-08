@@ -7,10 +7,11 @@ import { logoutUser } from "../../../../redux/rootActions";
 // Router
 import { Link } from "react-router-dom";
 
-import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { Icon as LegacyIcon } from "@ant-design/compatible";
 
 // Design
 import { Avatar, Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const useMenu = name => {
   const dispatch = useDispatch();
@@ -46,7 +47,9 @@ const AccountMenu = props => {
       trigger={["click"]}
       placement="bottomLeft"
     >
-      <Avatar className="avatar">{props.name[0]}</Avatar>
+      <span style={{cursor: "pointer"}}>
+        <Avatar className="avatar">{props.name[0]}</Avatar> <DownOutlined />
+      </span>
     </Dropdown>
   );
 };

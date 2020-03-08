@@ -29,7 +29,7 @@ const NavHeader = () => {
       />
       <div className="right-header-menu">
         <Notifications />
-        <AccountMenu name={accInfo.user_name || "User"} />
+        <AccountMenu name={accInfo.user_name || "Logged User"} />
       </div>
     </Header>
   );

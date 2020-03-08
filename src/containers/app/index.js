@@ -20,7 +20,7 @@ import firebase from "firebase";
 import Loader from "../../components/Loader";
 
 // Design (const)
-const { Content } = Layout;
+const { Content, Footer } = Layout;
 
 // Views
 const ErrorView = React.lazy(() => import("./error"));
@@ -92,6 +92,7 @@ const AppView = props => {
               <Redirect from="/a" to="/a/dashboard" />
             </Switch>
           </Content>
+          <Footer style={{borderTop:"1px solid lightgray"}}>Footer Placeholder</Footer>
         </Suspense>
       </Layout>
     </Layout>

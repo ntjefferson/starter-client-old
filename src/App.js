@@ -11,8 +11,8 @@ import {
   Redirect
 } from "react-router-dom";
 
-// Utils
-import "./utils/Firebase";
+// Constant
+import "./constant/Firebase";
 
 // Design
 import "./App.css";

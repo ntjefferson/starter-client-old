@@ -9,9 +9,25 @@
 
 .sidebar-menu-item {
   font-size: 16px !important;
+  filter: opacity(0.8);
+}
+
+.sidebar-menu-item:hover {
+  filter: opacity(1);
+}
+
+.sidebar-menu-item-selected {
+  font-size: 16px !important;
+  box-shadow: 5px 0px 0px #1890ff inset;
+  background-color: transparent !important;
 }
 
 .sidebar-menu-item svg {
+  margin-right: 10px;
+  font-size: 18px !important;
+}
+
+.sidebar-menu-item-selected svg {
   margin-right: 10px;
   font-size: 18px !important;
 }
