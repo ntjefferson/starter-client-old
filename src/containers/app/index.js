@@ -12,6 +12,7 @@ import { Layout } from "antd";
 // Layout
 import Sidebar from "../nav/sidebar";
 import NavHeader from "../nav/header";
+import MainFooter from "../nav/footer";
 
 // Other
 import firebase from "firebase";
@@ -20,11 +21,11 @@ import firebase from "firebase";
 import Loader from "../../components/Loader";
 
 // Design (const)
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 // Views
 const ErrorView = React.lazy(() => import("./error"));
-const AccountView = React.lazy(() => import("./account"));
+const DashboardView = React.lazy(() => import("./dashboard"));
 
 // Verifies firebase token and retrieves initial account info
 // Since there are two async requests, not using custom hook
@@ -86,13 +87,15 @@ const AppView = props => {
               <Redirect exact from={`/a`} to={`/a/dashboard`} />
               <Route
                 path="/a/dashboard"
-                render={props => <AccountView {...props} />}
+                render={props => (
+                  <DashboardView {...props} />
+                )}
               />
               <Route path="/a" render={props => <ErrorView {...props} />} />
               <Redirect from="/a" to="/a/dashboard" />
             </Switch>
           </Content>
-          <Footer style={{borderTop:"1px solid lightgray"}}>Footer Placeholder</Footer>
+          <MainFooter />
         </Suspense>
       </Layout>
     </Layout>

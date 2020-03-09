@@ -7,7 +7,8 @@ import { Row } from "antd";
 import InfoCard from "../../../components/InfoCard";
 import Colx from "../../../components/Colx";
 
-const AccountView = () => {
+const DashboardView = props => {
+
   return (
     <Row gutter={[24, 16]} type="flex">
       <Colx w={8}>
@@ -29,4 +30,4 @@ const AccountView = () => {
   );
 };
 
-export default AccountView;
+export default DashboardView;

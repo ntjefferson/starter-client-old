@@ -34,12 +34,12 @@ code {
   background-position: center;
 }
 
-.logo-login {
-    height: 64px;
-    background: url("./assets/nickj-dark.svg") no-repeat;
-    margin: 16px;
-    background-position: center;
-  }
+.logo-dark {
+  height: 64px;
+  background: url("./assets/nickj-dark.svg") no-repeat;
+  margin: 16px;
+  background-position: center;
+}
 
 .logo-mobile {
   height: 32px;

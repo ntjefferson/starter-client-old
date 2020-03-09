@@ -9,8 +9,8 @@ import { Redirect } from "react-router-dom";
 // Util
 import { myFirebase } from "../../constant/Firebase";
 
-import { Form, Icon as LegacyIcon } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
+import { Form, Icon as LegacyIcon } from "@ant-design/compatible";
+import "@ant-design/compatible/assets/index.css";
 
 // Design
 import { Input, Button, Checkbox, Card, message } from "antd";
@@ -55,47 +55,52 @@ class ForgotPassword extends React.Component {
     if (isAuthenticated) {
       return <Redirect to="/" />;
     } else {
-      return <>
-        <Form onSubmit={this.handleSubmit} className="login-form">
-          <div className="logo-login" />
+      return (
+        <>
+          <Form onSubmit={this.handleSubmit} className="login-form">
+            <div className="logo-dark" />
 
-          <Card>
-            <Form.Item>
-              {getFieldDecorator("email", {
-                rules: [
-                  { required: true, message: "Please input your email!" }
-                ]
-              })(
-                <Input
-                  prefix={
-                    <LegacyIcon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
-                  }
-                  placeholder="Email"
-                  name="email"
-                  onChange={this.onChange}
-                />
-              )}
-            </Form.Item>
-            <Form.Item>
-              {getFieldDecorator("remember", {
-                valuePropName: "checked",
-                initialValue: true
-              })(<Checkbox>Remember Me</Checkbox>)}
-              <a className="login-form-forgot" href="/user/login">
-                Need to login?
-              </a>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="login-form-button"
-                loading={this.props.isLoggingIn}
-              >
-                Reset Password
-              </Button>
-            </Form.Item>
-          </Card>
-        </Form>
-      </>;
+            <Card>
+              <Form.Item>
+                {getFieldDecorator("email", {
+                  rules: [
+                    { required: true, message: "Please input your email!" }
+                  ]
+                })(
+                  <Input
+                    prefix={
+                      <LegacyIcon
+                        type="user"
+                        style={{ color: "rgba(0,0,0,.25)" }}
+                      />
+                    }
+                    placeholder="Email"
+                    name="email"
+                    onChange={this.onChange}
+                  />
+                )}
+              </Form.Item>
+              <Form.Item>
+                {getFieldDecorator("remember", {
+                  valuePropName: "checked",
+                  initialValue: true
+                })(<Checkbox>Remember Me</Checkbox>)}
+                <a className="login-form-forgot" href="/user/login">
+                  Need to login?
+                </a>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="login-form-button"
+                  loading={this.props.isLoggingIn}
+                >
+                  Reset Password
+                </Button>
+              </Form.Item>
+            </Card>
+          </Form>
+        </>
+      );
     }
   }
 }

@@ -45,6 +45,13 @@ const Sidebar = props => {
     }
   };
 
+  // Where document title is set
+  const setTitle = (path, label) => {
+    if (path === location.pathname) {
+      document.title = `Starter - ${label}`;
+    }
+  };
+
   return (
     <Sider
       className="sidebar"
@@ -68,6 +75,7 @@ const Sidebar = props => {
       >
         {sidebarMenu.map(item => {
           if (!item.subMenu) {
+            setTitle(item.link, item.label);
             return (
               <Menu.Item key={item.link} className={selectedItem(item.link)}>
                 <LegacyIcon type={item.icon} theme={item.theme} />
@@ -92,6 +100,7 @@ const Sidebar = props => {
                 }
               >
                 {item.subItems.map(sub => {
+                  setTitle(sub.link, sub.label);
                   return (
                     <Menu.Item className="sidebar-submenu-item" key={sub.link}>
                       {sub.label}
