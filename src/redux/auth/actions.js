@@ -1,4 +1,4 @@
-import { myFirebase } from "../../constant/Firebase";
+import { myFirebase } from "../../constant/firebase";
 
 const requestLogin = () => {
   return {

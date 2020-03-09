@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 // Util
-import { myFirebase } from "../../constant/Firebase";
+import { myFirebase } from "../../constant/firebase";
 
 import { Form, Icon as LegacyIcon } from "@ant-design/compatible";
 import "@ant-design/compatible/assets/index.css";

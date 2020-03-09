@@ -12,14 +12,14 @@ import {
 } from "react-router-dom";
 
 // Constant
-import "./constant/Firebase";
+import "./constant/firebase";
 
 // Design
 import "./App.css";
 
 // Views
-import AppView from "./containers/app";
-import LoginView from "./containers/login";
+import AppView from "./pages/app";
+import LoginView from "./pages/login";
 
 // Components
 import Loader from "./components/Loader/"

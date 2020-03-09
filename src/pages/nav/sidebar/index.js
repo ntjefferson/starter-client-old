@@ -117,7 +117,11 @@ const Sidebar = props => {
           mode="inline"
           selectedKeys={[location.pathname]}
           className="sidebar-menu"
-          style={{ position: "absolute", bottom: "0" }}
+          style={
+            menuCollapsed && width < 576
+              ? { bottom: "0" }
+              : { position: "absolute", bottom: "0" }
+          }
         >
           {" "}
           <Menu.Item key={4} className="sidebar-menu-item">

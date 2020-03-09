@@ -24,8 +24,8 @@ import Loader from "../../components/Loader";
 const { Content } = Layout;
 
 // Views
-const ErrorView = React.lazy(() => import("./error"));
-const DashboardView = React.lazy(() => import("./dashboard"));
+const ErrorPage = React.lazy(() => import("./error"));
+const DashboardPage = React.lazy(() => import("./dashboard"));
 
 // Verifies firebase token and retrieves initial account info
 // Since there are two async requests, not using custom hook
@@ -77,9 +77,9 @@ const AppView = props => {
 
   // Success
   return (
-    <Layout style={{ height: "100vh" }}>
+    <Layout style={{ minHeight: "100vh" }}>
       <Sidebar />
-      <Layout style={{ height: "100vh" }}>
+      <Layout>
         <NavHeader />
         <Suspense fallback={<Loader />}>
           <Content style={{ padding: "24px" }}>
@@ -88,10 +88,10 @@ const AppView = props => {
               <Route
                 path="/a/dashboard"
                 render={props => (
-                  <DashboardView {...props} />
+                  <DashboardPage {...props} />
                 )}
               />
-              <Route path="/a" render={props => <ErrorView {...props} />} />
+              <Route path="/a" render={props => <ErrorPage {...props} />} />
               <Redirect from="/a" to="/a/dashboard" />
             </Switch>
           </Content>

@@ -11,7 +11,7 @@ const invalidUrl = () => {
   message.error("Invalid URL. Redirected to dashboard.");
 };
 
-const ErrorView = props => {
+const ErrorPage = props => {
   return (
     <div>
       {invalidUrl()}
@@ -20,4 +20,4 @@ const ErrorView = props => {
   );
 };
 
-export default ErrorView;
+export default ErrorPage;
