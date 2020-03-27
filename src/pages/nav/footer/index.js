@@ -15,7 +15,7 @@ const MainFooter = () => {
         <Colx w={8}>
           <div
             className="logo-mobile"
-            style={{ filter: "grayscale(1)", height: "2em" }}
+            style={{ filter: "grayscale(1)", opacity:"0.3", height: "2em" }}
           />
         </Colx>
         <Colx w={8}></Colx>

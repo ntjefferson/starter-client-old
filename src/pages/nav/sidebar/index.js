@@ -48,7 +48,7 @@ const Sidebar = props => {
   // Where document title is set
   const setTitle = (path, label) => {
     if (path === location.pathname) {
-      document.title = `Starter - ${label}`;
+      document.title = `Survaye - ${label}`;
     }
   };
 
@@ -64,6 +64,13 @@ const Sidebar = props => {
         broken
           ? dispatch({ type: "MOBILE_MENU" })
           : dispatch({ type: "DESKTOP_MENU" });
+      }}
+      style={{
+        overflow: "auto",
+        height: "100vh",
+        position: "sticky",
+        top: 0,
+        left: 0
       }}
     >
       <div className={menuCollapsed ? "logo-mobile" : "logo"} />
@@ -124,13 +131,15 @@ const Sidebar = props => {
           }
         >
           {" "}
-          <Menu.Item key={4} className="sidebar-menu-item">
+          <Menu.Item key={"/a/support"} className={selectedItem("/a/support")}>
             <QuestionCircleOutlined />
             <span>Support</span>
+            <Link to="/a/support" />
           </Menu.Item>
-          <Menu.Item key={3} className="sidebar-menu-item">
+          <Menu.Item key={"/a/whats-new"} className={selectedItem("/a/whats-new")}>
             <ThunderboltOutlined />
             <span>What's new</span>
+            <Link to="/a/whats-new" />
           </Menu.Item>
           <Menu.Item
             key={2}

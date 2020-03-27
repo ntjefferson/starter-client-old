@@ -16,11 +16,11 @@ import moment from "moment";
 const NotificationIcon = type => {
   let icon = [];
   if (type.type === "DOWN") {
-    icon = ["exclamation-circle", "#F4283F"];
+    icon = ["exclamation-circle", "#FF4D4F"];
   } else if (type.type === "INFO") {
-    icon = ["info-circle", "#0A6CFF"];
+    icon = ["info-circle", "#1890FF"];
   } else if (type.type === "FEATURE" || "RESOLVED") {
-    icon = ["check-circle", "#98DB37"];
+    icon = ["check-circle", "#52C41A"];
   } else {
     icon = ["question-circle", ""];
   }
@@ -73,10 +73,11 @@ const Notifications = props => {
 
   const { data } = useFetch(
     `http://localhost:5000/platform/v1/getNotifications`
-  );
+  )
 
   return (
     <div>
+      <span style={{marginRight: "16px"}}>
       <Badge dot={data.length > 0 ? true : false}>
         <LegacyIcon
           type="bell"
@@ -84,6 +85,7 @@ const Notifications = props => {
           onClick={showNotificationPane}
         />
       </Badge>
+      </span>
       <Drawer
         title="Recent Notifications"
         placement="right"

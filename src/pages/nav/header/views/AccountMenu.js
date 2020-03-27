@@ -47,7 +47,7 @@ const AccountMenu = props => {
       trigger={["click"]}
       placement="bottomLeft"
     >
-      <span style={{cursor: "pointer"}}>
+      <span style={{ cursor: "pointer" }}>
         <Avatar className="avatar">{props.name[0]}</Avatar> <DownOutlined />
       </span>
     </Dropdown>

@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
-export const useFetch = (url, token = false, method = "GET", param) => {
+export const useFetch = (url, reducer, method = "GET", param) => {
+  const dispatch = useDispatch();
   const [values, setValues] = useState({
     data: [],
     loading: true,
@@ -14,7 +15,12 @@ export const useFetch = (url, token = false, method = "GET", param) => {
     body = JSON.stringify(param);
   }
 
-  let authToken = useSelector(state => state.info.info);
+  // Uncomment this for JWT authentication
+  // let authToken = useSelector(state => state.info.userInfo.token) || "N/A";
+
+
+  // Delete this when uncommenting the above
+  let authToken = "N/A"
 
   const effectFetch = useCallback(() => {
     fetch(url, {
@@ -46,6 +52,10 @@ export const useFetch = (url, token = false, method = "GET", param) => {
   useEffect(() => {
     effectFetch();
   }, [effectFetch]);
+
+  if (reducer && !values.loading) {
+    dispatch({ type: reducer, payload: values.data });
+  }
 
   return values;
 };
